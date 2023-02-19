@@ -1,0 +1,61 @@
+@import url(../css/colors.css);
+/*ESTILOS HEADER*/
+
+.headerContainer{
+    display: flex;
+    justify-content: flex-end;
+    height: 75px;
+    width: 100%;
+    color: black;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.headUl{
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 40px 0 0;
+}
+
+.navLI{
+    list-style: none;
+    display: inline-block;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.navLI a{
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.5;
+}
+
+.navLI a:hover{
+    text-decoration: underline;
+    transition: all 0.5;
+}
+
+a.cita{
+    background-color: var(--color4);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 60px;
+}
+
+/*logo*/
+.logo{
+    width: 250px;
+    padding-right: 100px;
+    position: absolute;
+    margin-top: 90px;
+    left: 30px;
+    top: -85px;
+    /*transform: translateY(-85px); ???? */
+    z-index: 1;
+}
