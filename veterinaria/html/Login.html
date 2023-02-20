@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/signUp.css">
+    <link rel="stylesheet" href="../css/Login.css">
     <title>Iniciar Sesión</title>
+  <link rel="shortcut icon" href="../img/logo.png">
 </head>
 
 <body>
@@ -30,22 +31,26 @@
             <h1>Iniciar Sesión</h1>
             <fieldset>
                 
-                <label for="">
+                <label for="firtsNames">
                     Nombre
-                    <input type="text">
+                    <input type="text" id="firtsNames" required>
                 </label>
                 <label for="">
                     Apellido
-                    <input type="text">
+                    <input type="text" id="lastNames" required>
                 </label>
-                <label for="">
+                <label for="numTel">
                     Numero Telefonico
-                    <input type="text">
+                    <input type="text" id="numTel" required>
                 </label>
-                <label for="">
+                <label for="lorem">
                     Lorem. 
-                    <input type="text">
+                    <input type="text" id="lorem" required>
                 </label>
+                <label for="button" id="labelS">
+                    Enviar
+                </label>
+                <input type="submit" id="button">
             </fieldset>
         </form>
     </div>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/signUp.css">
     <title>Registrase</title>
+    <link rel="shortcut icon" href="../img/logo.png">
 </head>
 
 <body>
@@ -28,24 +29,24 @@
             <h1>Registrase</h1>
             <div class="field">
                 <fieldset>
-                    <label for="">
+                    <label for="firtNames">
                         Nombres
-                        <input type="text">
+                        <input type="text" id="firtNames" required>
                     </label>
-                    <label for="">
+                    <label for="lastName">
                         Apellidos
-                        <input type="text">
+                        <input type="text" id="lastNames" required>
                     </label>
                     <label for="">
                         Numero Telefonico
-                        <input type="number">
+                        <input type="tel"  id="numTel" required>
                     </label>
                    
                 </fieldset>
                 <fieldset>
                     <label for="">
                         Genero
-                        <select name="" id="">
+                        <select name="" id="" required>
                             <option value="" selected disabled></option>
                             <option value="M">Masculino</option>
                             <option value="F">Femenino</option>
@@ -53,16 +54,21 @@
                             <option value="null">Prefiero no decirlo</option>
                         </select>
                     </label>
-                    <label for="">
+                    <label for="dui">
                         DUI
-                        <input type="number">
+                        <input type="text" required id="dui">
                     </label>
-                    <label for="">
+                    <label for="direction">
                         Dirección
-                        <input type="text">
+                        <input type="text" required id="direction">
                     </label>
+                    
                 </fieldset>
             </div>
+            <label for="button" id="labelS">
+                Enviar
+            </label>
+            <input type="submit" id="button">
         </form>
     </div>
 
