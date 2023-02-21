@@ -4,30 +4,30 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
     //Restricciones para inputs
-    nombre: /^[a-zA-ZÁ-ÿ\s]{1,40}$/,
-    apellido: /^[a-zA-ZÁ-ÿ\s]{1,40}$/,
-    contraseña: /^.{4,12}$/, 
-    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\[a-zA-Z0-9-.]+$/,
-    teléfono: /^\d{7,12}$/
+    firstNames: /^[a-zA-ZÁ-ÿ\s]{1,40}$/,
+    lastNames: /^[a-zA-ZÁ-ÿ\s]{1,40}$/,
+    pass: /^.{4,12}$/, 
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\[a-zA-Z0-9-.]+$/,
+    numTel: /^\d{7,12}$/
 };
 
 const validarFormulario = (e) => {
     switch(e.target.name){
-        case "names":
-            if (expresiones.nombre.test()){
+        case "firstNames":
+            if (expresiones.firstNames.test()){
                 
             }
         break;
         case "lastNames":
             
         break;
-        case "numTelf":
+        case "numTel":
             
         break;
         case "genere":
             
         break;
-        case "dates":
+        case "date":
             
         break;
         case "DUI":
@@ -36,10 +36,10 @@ const validarFormulario = (e) => {
         case "direction":
             
         break;
-        case "correo":
+        case "email":
             
         break;
-        case "contra":
+        case "pass":
             
         break;
     };

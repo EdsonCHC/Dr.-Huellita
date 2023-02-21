@@ -23,9 +23,9 @@
             <h1>Registrase</h1>
             <div class="field">
                 <fieldset>
-                    <label for="firtNames">
+                    <label for="firstNames">
                         Nombres
-                        <input type="text" id="firtNames" required name="names">
+                        <input type="text" id="firstNames" required name="firstNames">
                     </label>
                     <label for="lastName">
                         Apellidos
@@ -33,11 +33,11 @@
                     </label>
                     <label for="numTel">
                         Numero Telefónico
-                        <input type="tel"  id="numTel" required name="numTelf">
+                        <input type="tel"  id="numTel" required name="numTel">
                     </label>
                     <label for="date">
                         Fecha de nacimiento
-                        <input type="date"  id="date" required name="dates">
+                        <input type="date"  id="date" required name="date">
                     </label>
                    
                 </fieldset>
@@ -54,7 +54,7 @@
                     </label>
                     <label for="dui">
                         DUI
-                        <input type="text" required id="dui" name="DUI">
+                        <input type="text" required id="DUI" name="DUI">
                     </label>
                     <label for="direction">
                         Dirección
@@ -62,11 +62,11 @@
                     </label>
                     <label for="email">
                         Correo Electrónico
-                        <input type="email" required id="email" name="correo">
+                        <input type="email" required id="email" name="email">
                     </label>
                     <label for="pass">
-                        Contraseña <sub>Mínimo 8 caracteres</sub>
-                        <input type="password" required id="pass" name="contra">
+                        Contraseña <sub>(Mínimo 8 caracteres)</sub>
+                        <input type="password" required id="pass" name="pass">
                     </label>
                 </fieldset>
             </div>

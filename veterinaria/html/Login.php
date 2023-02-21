@@ -27,7 +27,7 @@
                     <input type="email" id="email" required>
                 </label>
                 <label for="pass">
-                        Contraseña <sub>Mínimo 8 caracteres</sub>
+                        Contraseña <sub>(Mínimo 8 caracteres)</sub>
                         <input type="password" required id="direction">
                     </label>
                 <label for="button" id="labelS">
