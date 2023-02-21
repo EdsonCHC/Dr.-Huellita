@@ -22,23 +22,14 @@
         <form action="" method="post">
             <h1>Iniciar Sesión</h1>
             <fieldset>
-                
-                <label for="firtsNames">
-                    Nombre
-                    <input type="text" id="firtsNames" required>
+                <label for="email">
+                    Correo Electrónico
+                    <input type="email" id="email" required>
                 </label>
-                <label for="">
-                    Apellido
-                    <input type="text" id="lastNames" required>
-                </label>
-                <label for="numTel">
-                    Numero Telefonico
-                    <input type="text" id="numTel" required>
-                </label>
-                <label for="lorem">
-                    Lorem. 
-                    <input type="text" id="lorem" required>
-                </label>
+                <label for="pass">
+                        Contraseña <sub>Mínimo 8 caracteres</sub>
+                        <input type="password" required id="direction">
+                    </label>
                 <label for="button" id="labelS">
                     Enviar
                 </label>
