@@ -61,3 +61,7 @@ a.cita{
     /*transform: translateY(-85px); ???? */
     z-index: 1;
 }
+
+.esconder{
+    display: none;
+}

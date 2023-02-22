@@ -1,5 +1,5 @@
 <?php
-        include('../php/conex.php')
+        $conn = new mysqli('localhost','root','','drhuellita');
 
         //OBTENCIÓN DE DATOS
        $nombre = $_POST['firstNames'];
@@ -19,6 +19,7 @@
         </script>";
        }
        else{
+        $conn = new mysqli('localhost','root','','drhuellita');
         if ($conn->connect_error) {
         die("conexión fallida: ".$conn->connect_error); 
         }
@@ -26,8 +27,8 @@
 
         $stmt = $conn->prepare("INSERT INTO users(`firstNames`, `lastNames`, `gender`, `email`, `pass`,
         `numTel`, `date`, `DUI`,`direction`) 
-        VALUES (?,?,?,?,?)"); 
-        $stmt->bind_param("ssssssds", $nombre, $apellido, $gender, $email, $password, $numTel, $date, $dui, $direction); 
+        VALUES (?,?,?,?,?,?,?,?,?)"); 
+        $stmt->bind_param("sssssssss", $nombre, $apellido, $gender, $email, $password, $numTel, $fecha, $dui, $direction); 
         sleep(1);
         $stmt->execute();
         $stmt->close();
@@ -41,6 +42,7 @@
        }
        
         function buscarRepetido($email){
+        $conn = new mysqli('localhost','root','','drHuellita');
         $search = $conn->prepare("SELECT * FROM users WHERE Email = ?");
         $search->bind_param("s", $email);
         $search->execute();
