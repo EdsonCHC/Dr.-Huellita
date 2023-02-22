@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinica Veterinaria Mr. Huellita</title>
+    <title>Clínica Veterinaria Mr. Huellita</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="shortcut icon" href="../img/logo.png">
 </head>
@@ -21,7 +21,7 @@
             <p class="name">Mr. <br> 
                 Huellita</p>
             <p class="little">
-                Clinica Veterinaria
+                Clínica Veterinaria
             </p>
         </div>
     </header>

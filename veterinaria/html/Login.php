@@ -19,16 +19,16 @@
     ?>
 
     <div id="container">
-        <form action="" method="post">
+        <form action="../php/login.php" method="post">
             <h1>Iniciar Sesión</h1>
             <fieldset>
                 <label for="email">
                     Correo Electrónico
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="email" required>
                 </label>
                 <label for="pass">
                         Contraseña <sub>(Mínimo 8 caracteres)</sub>
-                        <input type="password" required id="direction">
+                        <input type="password" required id="pass" name="pass">
                     </label>
                 <label for="button" id="labelS">
                     Enviar
