@@ -21,6 +21,24 @@ body{
 
 }
 
+@font-face {
+    font-family: fied;
+    src: url(../fonts/Spotyfied\ Me.ttf);
+
+}
+
+@font-face {
+    font-family: play;
+    src: url(../fonts/PlayoutDemoRegular.ttf);
+
+}
+
+@font-face {
+    font-family: pulang;
+    src: url(../fonts/Pulang.otf);
+
+}
+
 /*scrollbar*/
 ::-webkit-scrollbar{
     width: 5px;
@@ -66,17 +84,20 @@ header{
 }
 
 .name{
-    font-size: 70px;
+    font-size: 90px;
     font-weight: 400;
-    font-family: smile; 
+    font-family: play; 
     color: var(--color3);
+    letter-spacing: -4px;
+    line-height: 90px;
    
 }
 
 .little{
+    font-family: pulang;
     font-size: 20px;
     color: black;
-    margin-left: 50px;
+    margin-left: 15px;
 }
 
 /*ESTILOS INFORMACION*/
@@ -100,9 +121,9 @@ main{
 }
 
 .mainSection h2{
-    font-family: smile;
+    font-family: pulang;
     color: #0059b8;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 .container{
@@ -140,6 +161,13 @@ main{
 	-ms-flex-pack: center;
 	justify-content: center;
     text-align: center;
+}
+
+.little2{
+    font-family: pulang;
+    font-size: 30px;
+    color: var(--color3);
+    margin-right: 15px;
 }
 
 .tarjeta-wrap{

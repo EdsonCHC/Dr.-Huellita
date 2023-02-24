@@ -18,8 +18,8 @@
     <header>
         <img class="animalImg" src="../img/vista-frontal-hermoso-perro-espacio-copia.jpg" alt="petsImg">
         <div class="frase">
-            <p class="name">Dr. <br> 
-                Huellita</p>
+            <p class="name">DR <br> 
+                HUELLITA</p>
             <p class="little">
                 Clínica Veterinaria
             </p>
@@ -56,42 +56,42 @@
 		<div class="tarjeta-wrap">
 			<div class="tarjeta">
 				<div class="adelante">
-					<p>Medicina General</p>
+					<p class="servicio">Medicina General</p>
 				</div>
 			</div>
 		</div>
         <div class="tarjeta-wrap">
 			<div class="tarjeta">
 				<div class="adelante">
-					<p>Vacunaciones</p>
+					<p class="servicio">Vacunaciones</p>
 				</div>
 			</div>
 		</div>
         <div class="tarjeta-wrap">
 			<div class="tarjeta">
 				<div class="adelante">
-					<p>Desparacitación</p>
+					<p class="servicio">Desparacitación</p>
 				</div>
 			</div>
 		</div>
         <div class="tarjeta-wrap">
 			<div class="tarjeta">
 				<div class="adelante">
-					<p>Cirugía General</p>
+					<p class="servicio" >Cirugía General</p>
 				</div>
 			</div>
 		</div>
         <div class="tarjeta-wrap">
 			<div class="tarjeta">
 				<div class="adelante">
-					<p>Nutrición</p>
+					<p class="servicio" >Nutrición</p>
 				</div>
 			</div>
 		</div>
         <div class="tarjeta-wrap">
 			<div class="tarjeta">
 				<div class="adelante">
-					<p>Revision Veterinaria</p>
+					<p class="servicio">Revision Veterinaria</p>
 				</div>
 			</div>
 		</div>
