@@ -1,5 +1,6 @@
 @import url(../css/header.css);
 @import url(../css/colors.css);
+@import url(../css/fonts.css);
 
 *, html{
 
@@ -15,29 +16,6 @@ body{
 
 /*fonts */
 
-@font-face {
-    font-family: smile;
-    src: url(../fonts/Purple\ Smile.otf);
-
-}
-
-@font-face {
-    font-family: fied;
-    src: url(../fonts/Spotyfied\ Me.ttf);
-
-}
-
-@font-face {
-    font-family: play;
-    src: url(../fonts/PlayoutDemoRegular.ttf);
-
-}
-
-@font-face {
-    font-family: pulang;
-    src: url(../fonts/Pulang.otf);
-
-}
 
 /*scrollbar*/
 ::-webkit-scrollbar{
@@ -51,8 +29,6 @@ body{
     ::-webkit-scrollbar-thumb{
     background: #0059b8
 }
-
-
 
 
 /*ESTILOS IMAGEN*/
@@ -98,6 +74,13 @@ header{
     font-size: 20px;
     color: black;
     margin-left: 15px;
+}
+
+#dot{
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    left: -27px;
+    top: 5px;
 }
 
 /*ESTILOS INFORMACION*/
@@ -176,11 +159,19 @@ main{
 
 .tarjeta{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color3);
+    font-family: pulang;
 	width: 300px;
 	height: 150px;
 	background: #ffa929;
     border-radius: 10px;
+}
+
+.icon{
+    width: 95px;
+    margin-top: 5px;
 }
 
 footer {

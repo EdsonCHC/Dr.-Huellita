@@ -18,7 +18,7 @@
     <header>
         <img class="animalImg" src="../img/vista-frontal-hermoso-perro-espacio-copia.jpg" alt="petsImg">
         <div class="frase">
-            <p class="name">DR <br> 
+            <p class="name">DR <span id="dot">.</span> <br> 
                 HUELLITA</p>
             <p class="little">
                 Clínica Veterinaria
@@ -57,6 +57,7 @@
 			<div class="tarjeta">
 				<div class="adelante">
 					<p class="servicio">Medicina General</p>
+                    <img class ="icon" src="../icons/health-insurance.png" alt="general-medicine">
 				</div>
 			</div>
 		</div>
@@ -64,6 +65,7 @@
 			<div class="tarjeta">
 				<div class="adelante">
 					<p class="servicio">Vacunaciones</p>
+                    <img class="icon" src="../icons/medical-equipment.png" alt="vacuum">
 				</div>
 			</div>
 		</div>
@@ -71,6 +73,7 @@
 			<div class="tarjeta">
 				<div class="adelante">
 					<p class="servicio">Desparacitación</p>
+                    <img class="icon" src="../icons/pills.png" alt="parasite">
 				</div>
 			</div>
 		</div>
@@ -78,6 +81,7 @@
 			<div class="tarjeta">
 				<div class="adelante">
 					<p class="servicio" >Cirugía General</p>
+                    <img class="icon" src="../icons/surgery-room.png" alt="general-surgery">
 				</div>
 			</div>
 		</div>
@@ -85,6 +89,7 @@
 			<div class="tarjeta">
 				<div class="adelante">
 					<p class="servicio" >Nutrición</p>
+                    <img class ="icon" src="../icons/hospital.png" alt="nutrition">
 				</div>
 			</div>
 		</div>
@@ -92,6 +97,7 @@
 			<div class="tarjeta">
 				<div class="adelante">
 					<p class="servicio">Revision Veterinaria</p>
+                    <img class="icon" src="../icons/stethoscope.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -100,5 +106,7 @@
     <?php
     include('../html/footer.php');
     ?>
+
+    <script src="../js/toggle.js"></script>
 </body>
 </html>

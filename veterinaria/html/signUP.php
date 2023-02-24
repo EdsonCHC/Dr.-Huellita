@@ -20,7 +20,7 @@
 
     <div id="container">
         <form action="../php/singup.php" method="post" id="formulario">
-            <h1>Registrase</h1>
+            <h1>Registrarse</h1>
             <div class="field">
                 <fieldset>
                     <label for="firstNames">

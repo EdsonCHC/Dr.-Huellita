@@ -20,7 +20,7 @@
 
     <div id="container">
         <form action="../php/login.php" method="post">
-            <h1>Iniciar Sesión</h1>
+            <h1>Iniciar Sesion <span id="point">´</span></h1>
             <fieldset>
                 <label for="email">
                     Correo Electrónico
