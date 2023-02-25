@@ -39,7 +39,7 @@
                         Fecha de nacimiento
                         <input type="date"  id="date" required name="date">
                     </label>
-                   
+                    <p class="warnings" id="warnings">.</p>  
                 </fieldset>
                 <fieldset>
                     <label for="selects">
@@ -68,6 +68,7 @@
                         Contraseña <sub>(Mínimo 8 caracteres)</sub>
                         <input type="password" required id="pass" name="pass">
                     </label>
+                    
                 </fieldset>
             </div>
             <label for="button" id="labelS">
@@ -76,6 +77,6 @@
             <input type="submit" id="button">
         </form>
     </div>
-    <script src="../js/validacion.js"></script>
+    <script src="../js/validacionSignUp.js"></script>
 </body>
 </html>

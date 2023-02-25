@@ -43,7 +43,7 @@
             }
         }
         else{
-            $var = "Correo incorrecto o inexistente";
+            $var = "Correo incorrecto";
             echo "<script> alert('".$var."');
             window.location.href='../html/Login.php';
             </script>";
