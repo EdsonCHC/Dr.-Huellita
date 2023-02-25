@@ -20,6 +20,7 @@ formulario.addEventListener("submit", e => {
     if (firstNames.value.length < 8) {
         warnings += `El nombre no es valido`;
         entrar = true;
+        text.innerHTML = warnings;
     };
     if (!regexEmail.test(email.value)) {
         warnings += `El email no es valido`;

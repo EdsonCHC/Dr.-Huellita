@@ -5,7 +5,8 @@
     $password = $_POST['pass'];
 
     //CONEXIÓN A LA BASE DE DATOS
-    $con = new mysqli('localhost','root','','drhuellita'); 
+    require_once('../php/conex.php');
+
     if($con->connect_error){ 
         die ("Failed to connect: ".$con->connection_error);
     }
@@ -43,7 +44,7 @@
             }
         }
         else{
-            $var = "Correo incorrecto";
+            $var = "Correo incorrecto o inexistente";
             echo "<script> alert('".$var."');
             window.location.href='../html/Login.php';
             </script>";
