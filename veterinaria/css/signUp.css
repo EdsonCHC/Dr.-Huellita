@@ -70,11 +70,10 @@ input {
 }
 
 .warnings{
-    width: 200px;
-    text-align: right;
-    margin: auto;
-    color: black;
-    padding-top: 30px;
+    color: red;
+    width: auto;
+    text-align: left;
+    margin: 20px 0;
     position: absolute;
 }
 
@@ -91,4 +90,15 @@ input {
     height: 30px;
     background-color: var(--color5);
     border-radius: 8px;
+}
+
+.sePass{
+    position: relative;
+    left: 90%;
+    top: -20px;
+}
+
+.sePass img{
+    width: 20px;
+    height: 15px;
 }

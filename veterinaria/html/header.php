@@ -15,14 +15,13 @@
           <li class="navLI"><a class="cita" href="#">Cita</a></li>
     </ul>
     <div class="user-config" id="subMenu">
-        <div class="userInfo">
+        <div id="userInfo">
             <h2>Lorem, ipsum.</h2>
             <hr>
-        <ul>
-            <li>Lorem, ipsum. <span>></span></li>
-            <li>Lorem, ipsum. <span>></span></li>
-            <li>Lorem, ipsum. <span>></span></li>
-        </ul>
+            <a href="" class="listUser"><i><img class="userIcon" src="../icons/setting.png" alt="settings"></i><p>Ajustes de Cuenta</p> <span class="arrow">></span></a>
+            <a href="" class="listUser"><i><img class="userIcon" src="../icons/plus-symbol-button.png" alt="quote"></i><p>Hacer Cita</p> <span class="arrow">></span></a>
+            <a href="" class="listUser"><i><img class="userIcon" src="../icons/pawprint.png" alt="pet"></i><p>Mascotas</p> <span class="arrow">></span></a>
+            <a href="../php/logout.php" class="listUser"><i><img class="userIcon" src="../icons/logout.png" alt="logout"></i><p>Cerra Sesión</p> <span class="arrow">></span></a>
         </div>
     </div>
 </div>

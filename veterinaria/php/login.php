@@ -5,13 +5,13 @@
     $password = $_POST['pass'];
 
     //CONEXIÓN A LA BASE DE DATOS
-    require_once('../php/conex.php');
+    $conn = new mysqli('localhost','root','','drhuellita');
 
-    if($con->connect_error){ 
-        die ("Failed to connect: ".$con->connection_error);
+    if($conn->connect_error){ 
+        die ("Failed to connect: ".$conn->connect_error);
     }
     else{
-        $stmt = $con->prepare("SELECT * from users where Email = ?");
+        $stmt = $conn->prepare("SELECT * from users where Email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $stmt_result = $stmt->get_result();
@@ -20,7 +20,7 @@
             if($data['pass'] == $password){ 
                 sleep(1);
 
-                $nombre = $con->prepare("SELECT * FROM users WHERE Email = ?");
+                $nombre = $conn->prepare("SELECT * FROM users WHERE Email = ?");
                 $nombre->bind_param("s", $email);
                 $nombre->execute();
                 $result = $nombre->get_result();

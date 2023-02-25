@@ -29,6 +29,7 @@
                 <label for="pass">
                         Contraseña <sub>(Mínimo 8 caracteres)</sub>
                         <input type="password" required id="pass" name="pass">
+                        <i class="sePass" onclick="mostrarContraseña();"><img src="../icons/ver.png" id="changeImage"></i>
                     </label>
                 <label for="button" id="labelS">
                     Enviar
@@ -37,7 +38,7 @@
             </fieldset>
         </form>
     </div>
-
+    <script src="../js/seepass.js"></script>
 </body>
 
 </html>

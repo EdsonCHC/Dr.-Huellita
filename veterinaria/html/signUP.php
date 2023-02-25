@@ -25,26 +25,27 @@
                 <fieldset>
                     <label for="firstNames">
                         Nombres
-                        <input type="text" id="firstNames" required name="firstNames">
+                        <input type="text" id="firstNames" name="firstNames">
                     </label>
                     <label for="lastName">
                         Apellidos
-                        <input type="text" id="lastNames" required name="lastNames">
+                        <input type="text" id="lastNames" name="lastNames">
                     </label>
                     <label for="numTel">
                         Numero Telefónico
-                        <input type="tel"  id="numTel" required name="numTel">
+                        <input type="tel"  id="numTel" name="numTel">
                     </label>
                     <label for="date">
                         Fecha de nacimiento
-                        <input type="date"  id="date" required name="date">
+                        <input type="date"  id="date" name="date">
                     </label>
-                    <p class="warnings" id="warnings">.</p>  
+                    <p class="warnings" id="warnings"></p>
+                     
                 </fieldset>
                 <fieldset>
                     <label for="selects">
                         Genero
-                        <select name="gender" id="selects" required>
+                        <select name="gender" id="selects">
                             <option value="" selected disabled></option>
                             <option value="M">Masculino</option>
                             <option value="F">Femenino</option>
@@ -54,19 +55,20 @@
                     </label>
                     <label for="dui">
                         DUI
-                        <input type="text" required id="DUI" name="DUI">
+                        <input type="text" id="DUI" name="DUI">
                     </label>
                     <label for="direction">
                         Dirección
-                        <input type="text" required id="direction" name="direction">
+                        <input type="text" id="direction" name="direction">
                     </label>
                     <label for="email">
                         Correo Electrónico
-                        <input type="email" required id="email" name="email">
+                        <input type="email" id="email" name="email">
                     </label>
                     <label for="pass">
                         Contraseña <sub>(Mínimo 8 caracteres)</sub>
-                        <input type="password" required id="pass" name="pass">
+                        <input type="password" id="pass" name="pass">
+                        <i class="sePass" onclick="mostrarContraseña();"><img src="../icons/ver.png" id="changeImage"></i>
                     </label>
                     
                 </fieldset>
@@ -78,5 +80,6 @@
         </form>
     </div>
     <script src="../js/validacionSignUp.js"></script>
+    <script src="../js/seepass.js"></script>
 </body>
 </html>

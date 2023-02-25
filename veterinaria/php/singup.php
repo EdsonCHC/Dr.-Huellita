@@ -1,5 +1,5 @@
 <?php
-       require_once('../php/conex.php');
+        $conn = new mysqli('localhost','root','','drhuellita');
 
         //OBTENCIÓN DE DATOS
        $nombre = $_POST['firstNames'];
@@ -19,7 +19,7 @@
         </script>";
        }
        else{
-        //$conn = new mysqli('localhost','root','','drhuellita');
+        $conn = new mysqli('localhost','root','','drhuellita');
         if ($conn->connect_error) {
         die("conexión fallida: ".$conn->connect_error); 
         }
@@ -42,7 +42,7 @@
        }
        
         function buscarRepetido($email){
-        //$conn = new mysqli('localhost','root','','drHuellita');
+        $conn = new mysqli('localhost','root','','drHuellita');
         $search = $conn->prepare("SELECT * FROM users WHERE Email = ?");
         $search->bind_param("s", $email);
         $search->execute();

@@ -1,6 +1,6 @@
 const formulario = document.getElementById("formulario");
 const firstNames = document.getElementById("firstNames");
-//const lastName = document.getElementById("lastNames")
+const lastName = document.getElementById("lastNames")
 const email = document.getElementById("email");
 const pass = document.getElementById("pass");
 const text = document.getElementById("warnings");
@@ -18,16 +18,15 @@ formulario.addEventListener("submit", e => {
     //let pass = /^.{4,12}$/
     text.innerHTML = "";
     if (firstNames.value.length < 8) {
-        warnings += `El nombre no es valido`;
+        warnings += `! El nombre no es valido ! <br>`;
         entrar = true;
-        text.innerHTML = warnings;
     };
     if (!regexEmail.test(email.value)) {
-        warnings += `El email no es valido`;
+        warnings += `! El email no es valido ! <br>`; 
         entrar = true;
     };
     if (pass.value.length < 8) {
-        warnings += `La contraseña no es valida`;
+        warnings += `! La contraseña no es valida !  <br>`;
         entrar = true;
     };
     if (entrar) {
