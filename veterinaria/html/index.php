@@ -102,6 +102,11 @@
 			</div>
 		</div>
 	</div>
+    <div class="cita">
+        <form action="" method="post">
+            
+        </form>
+    </div>
     <!-- import footer -->
     <?php
     include('../html/footer.php');

@@ -1,37 +1,64 @@
 const formulario = document.getElementById("formulario");
 const firstNames = document.getElementById("firstNames");
-const lastName = document.getElementById("lastNames")
-const email = document.getElementById("email");
+const lastNames = document.getElementById("lastNames");
+const cell = document.getElementById("numTel");
+const dui = document.getElementById("DUI");
+const direction = document.getElementById("direction")
+const correo = document.getElementById("email");
 const pass = document.getElementById("pass");
 const text = document.getElementById("warnings");
 
 formulario.addEventListener("submit", e => {
-    e.preventDefault();
     let warnings = ""; 
     let entrar = false;
-    //let firstNames = /^[a-zA-ZÁ-ÿ\s]{1,40}$/
-    //let lastNames = /^[a-zA-ZÁ-ÿ\s]{1,40}$/
-    //let telefono = /^\d{7,12}$/
-    //let dui = /^\d{7,12}$/
-    //let direccion = /^[a-zA-ZÁ-ÿ\s]{1,150}$/
-    let regexEmail = /^w+@[a-zA-Z_]+?.[a-zA-Z] {2,3}$/
-    //let pass = /^.{4,12}$/
+    let regexNombre = /^[a-zA-ZÁ-ÿ\s]{1,40}$/
+    let regexApellido = /^[a-zA-ZÁ-ÿ\s]{1,40}$/
+    let regexTelefono = /(\+\d{1,3}( )?)?((\(\d{1,3}\))|\d{1,3})[- .]?\d{3,4}[- .]?\d{4}$/
+    //let fecha = /^([1-2][0-9]|3[0-1]|0?[1-9])([-\.\/ ])(1[0-2]|0?[1-9])(\2)([\d]{4}|[\d]{2})$/
+    let regexDui = /^\d{8}-\d{1}$/
+    let regexDirection = /^[A-Za-z0-9\s]+$/g
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
+    let regexPass = /^[A-Za-z\d]{8,}$/ 
     text.innerHTML = "";
-    if (firstNames.value.length < 8) {
-        warnings += `! El nombre no es valido ! <br>`;
+    //Validación nombre
+    if (!regexNombre.test(firstNames.value)) {
+        warnings += `El nombre no es valido<br>`;
         entrar = true;
-    };
-    if (!regexEmail.test(email.value)) {
-        warnings += `! El email no es valido ! <br>`; 
+    }
+    //Validación apellido
+    if (!regexApellido.test(lastNames.value)) {
+        warnings += `El apellido no es valido<br>`;
         entrar = true;
-    };
-    if (pass.value.length < 8) {
-        warnings += `! La contraseña no es valida !  <br>`;
+    }
+    //Validación telefóno
+    if (!regexTelefono.test(cell.value)) {
+        warnings += `El número de telefóno no es valido<br>`;
         entrar = true;
-    };
+    }
+    //Validación dui
+    if (!regexDui.test(dui.value)) {
+        warnings += `El número de DUI no es valido<br>`;
+        entrar = true;
+    }
+    //Validación direccion
+    if (!regexDirection.test(direction.value)) {
+        warnings += `La dirección no es valida<br>`;
+        entrar = true;
+    }
+    //Validación email
+    if (!regexEmail.test(correo.value)) {
+        warnings += `El email no es valido<br>`;
+        entrar = true;
+    }
+    //Validación contraseña
+    if (!regexPass.test(pass.value)) {
+        warnings += `La contraseña no es valida<br>`;
+        entrar = true;
+    }
     if (entrar) {
         text.innerHTML = warnings;
+        e.preventDefault();
     }else{
         text.innerHTML = "Enviado";
-    };
+    }
 });

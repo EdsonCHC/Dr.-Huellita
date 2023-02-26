@@ -17,6 +17,7 @@
         echo "<script> alert('El Correo ingresado ya existe, por favor ingresa otro...');
         window.location.href='../html/signUp.php';
         </script>";
+        
        }
        else{
         $conn = new mysqli('localhost','root','','drhuellita');
