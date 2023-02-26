@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
     //Variables
     $email = $_POST['email'];
     $password = $_POST['pass'];

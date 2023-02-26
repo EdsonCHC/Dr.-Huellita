@@ -1,0 +1,21 @@
+footer {
+    width: 100%;
+    background-color: #ffa929;
+    color: #fff;
+    }
+    
+    .top_header {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    }
+    
+    .top_header section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

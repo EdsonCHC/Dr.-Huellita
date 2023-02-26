@@ -1,5 +1,5 @@
 <?php
-    session_start();
+     session_start();
     
     function esconder(){//No se muestra si no hay sesión
         if(!isset($_SESSION["user_info"][0])){

@@ -41,10 +41,6 @@ fieldset {
     min-width: 100px;
 }
 
-legend{
-    margin: 5px;
-}
-
 label, select {
     width: 100%;
     display: block;
@@ -52,7 +48,7 @@ label, select {
     cursor: pointer;
 }
 
-input {
+input, textarea {
     margin: 10px 0 0 0;
     width: 100%;
     min-height: 2em;

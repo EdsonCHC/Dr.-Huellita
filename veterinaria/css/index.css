@@ -1,6 +1,7 @@
 @import url(../css/header.css);
 @import url(../css/colors.css);
 @import url(../css/fonts.css);
+@import url(../css/footer.css);
 
 *, html{
 
@@ -174,24 +175,62 @@ main{
     margin-top: 5px;
 }
 
-footer {
+#cita{
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    background-color: var(--color5);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.campos{
+    display: flex;
+    gap: 20px;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0 0 0;
+    min-width: 100px;
+}
+
+label, select{
     width: 100%;
-    background-color: #ffa929;
-    color: #fff;
-    }
-    
-    .top_header {
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    }
-    
-    .top_header section {
-    display: flex;
+    display: block;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+input, textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    padding: 1px 0px 1px 4px;
+    padding: 5px;
+}
+
+h1 {
+    margin: 0.3em auto;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    font-weight: 100;
+    font-family: play;
+}
+
+#button{
+    display: none;
+}
+
+#labelS{
+    margin: 10px auto 0;
+    color: #fff;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+    height: 30px;
+    background-color: var(--color2);
 }
