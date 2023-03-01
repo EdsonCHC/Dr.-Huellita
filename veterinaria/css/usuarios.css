@@ -177,4 +177,12 @@ h3{
     color: red;
 }
 
+.si{
+    display: none;
+}
+
+.si-on{
+    display: block;
+}
+
   

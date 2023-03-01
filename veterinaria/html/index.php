@@ -172,7 +172,6 @@
                 Enviar
             </label>
             <input type="submit" id="button">
-            <p>O Inicie Sesión y facilite el proceso</p>
         </form>
     </div>
     <!-- import footer -->

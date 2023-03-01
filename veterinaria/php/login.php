@@ -37,6 +37,7 @@
                 $_SESSION["user_info"][6] = $dato['DUI'];
                 $_SESSION["user_info"][7] = $dato['direction'];
                 $_SESSION["user_info"][8] = $dato['pass'];
+                $_SESSION["user_info"][9] = $dato['id'];
 
                 $mensaje ="Bienvenid@";
                 echo "<script> alert('$mensaje');

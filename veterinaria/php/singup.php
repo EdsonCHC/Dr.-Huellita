@@ -13,6 +13,9 @@
        $direction = $_POST['direction'];
        $password = $_POST['pass'];
        $password = hash('sha256',$password);
+       $carpeta = '../img';
+       $Nombre_imagen = 'logo.png';
+       $img = $carpeta.'/'.$Nombre_imagen;
 
        if(buscarRepetido($email) == 1) {
  
@@ -29,9 +32,9 @@
         else {
 
         $stmt = $conn->prepare("INSERT INTO users(`firstNames`, `lastNames`, `gender`, `email`, `pass`,
-        `numTel`, `date`, `DUI`,`direction`) 
-        VALUES (?,?,?,?,?,?,?,?,?)"); 
-        $stmt->bind_param("sssssssss", $nombre, $apellido, $gender, $email, $password, $numTel, $fecha, $dui, $direction); 
+        `numTel`, `date`, `DUI`,`direction`,`img`) 
+        VALUES (?,?,?,?,?,?,?,?,?,?)"); 
+        $stmt->bind_param("ssssssssss", $nombre, $apellido, $gender, $email, $password, $numTel, $fecha, $dui, $direction, $img); 
         sleep(1);
         $stmt->execute();
         $stmt->close();
