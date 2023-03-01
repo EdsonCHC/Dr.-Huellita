@@ -23,13 +23,8 @@
     <main>
       <div class="container">
         <div class="left box-primary">
-          <img class="image" src="<?php echo $_SESSION["user_info"][9]?>" alt="" id="img-preview" />
+          <img class="image" src="../img/logo.png" alt="imgUser" id="img-preview" />
           <h3 class="username text-center"><?php echo $_SESSION["user_info"][0]?> <?php echo $_SESSION["user_info"][1]?> </h3>
-          <form action="" enctype="multipart/form-data">
-            <label class="btn" for="img"><b>Editar foto</b></label>
-          <input type="file" id="img"onchange="vista_preliminar(event)">
-          <label for="sub" id="sub-img-preview" class="si">Guardar</label>
-          <input type="submit">
         </form>
         </div>
         <div class="right tab-content">
