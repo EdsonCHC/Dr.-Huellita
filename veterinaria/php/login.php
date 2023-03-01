@@ -4,6 +4,7 @@
     //Variables
     $email = $_POST['email'];
     $password = $_POST['pass'];
+    $password = hash('sha256', $password);
 
     //CONEXIÓN A LA BASE DE DATOS
     $conn = new mysqli('localhost','root','','drhuellita');
@@ -29,8 +30,13 @@
                 $_SESSION["user_info"] = array();
                 $_SESSION["user_info"][0] = $dato['firstNames'];
                 $_SESSION["user_info"][1] = $dato['lastNames'];
-                $_SESSION["user_info"][2] = $dato['gender'];
-                $_SESSION["user_info"][3] = $dato['id'];
+                $_SESSION["user_info"][2] = $dato['email'];
+                $_SESSION["user_info"][3] = $dato['gender'];
+                $_SESSION["user_info"][4] = $dato['numTel'];
+                $_SESSION["user_info"][5] = $dato['date'];
+                $_SESSION["user_info"][6] = $dato['DUI'];
+                $_SESSION["user_info"][7] = $dato['direction'];
+                $_SESSION["user_info"][8] = $dato['pass'];
 
                 $mensaje ="Bienvenid@";
                 echo "<script> alert('$mensaje');

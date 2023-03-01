@@ -18,7 +18,7 @@
         <div id="userInfo">
             <h2>Lorem, ipsum.</h2>
             <hr>
-            <a href="" class="listUser"><i><img class="userIcon" src="../icons/setting.png" alt="settings"></i><p>Ajustes de Cuenta</p> <span class="arrow">></span></a>
+            <a href="../html/usuarios.php" class="listUser"><i><img class="userIcon" src="../icons/setting.png" alt="settings"></i><p>Ajustes de Cuenta</p> <span class="arrow">></span></a>
             <a href="" class="listUser"><i><img class="userIcon" src="../icons/plus-symbol-button.png" alt="quote"></i><p>Hacer Cita</p> <span class="arrow">></span></a>
             <a href="" class="listUser"><i><img class="userIcon" src="../icons/pawprint.png" alt="pet"></i><p>Mascotas</p> <span class="arrow">></span></a>
             <a href="../php/logout.php" class="listUser"><i><img class="userIcon" src="../icons/logout.png" alt="logout"></i><p>Cerra Sesión</p> <span class="arrow">></span></a>

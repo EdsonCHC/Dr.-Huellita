@@ -9,8 +9,10 @@
        $gender = $_POST['gender'];
        $fecha = $_POST['date'];
        $dui = $_POST['DUI'];
+       $dui = hash('sha256',$dui);
        $direction = $_POST['direction'];
        $password = $_POST['pass'];
+       $password = hash('sha256',$password);
 
        if(buscarRepetido($email) == 1) {
  
