@@ -50,7 +50,7 @@
                 </fieldset>
                 <fieldset>
                     <label for="selects">
-                        Genero
+                        Sexo
                         <select name="gender" id="selects" required>
                             <option value="" selected disabled></option>
                             <option value="M">Masculino</option>

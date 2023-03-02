@@ -10,7 +10,7 @@ let vista_preliminar = (event)=> {
         }
     }
     vista.readAsDataURL(event.target.files[0])
-    sub_img.classList.add("si-on",Element.width);//A al contenedor de la imagen se le añade la clase "si" al detectar un ancho
+    sub_img.classList.add("on",Element.width);//A al contenedor de la imagen se le añade la clase "si" al detectar un ancho
 }
 
 

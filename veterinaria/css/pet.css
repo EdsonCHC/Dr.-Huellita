@@ -33,22 +33,17 @@ body{
 
 main{
     margin: 100px auto 30px;
-    position: relative;
-    left: -100px;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
 }
 
 .container{
-  margin: 20px;
+  margin: 0 auto;
   display: table;
 }
 
 .left{
     float: left;
-    width: 225px;
-    height: 350px;
+    width: 250px;
+    height: auto;
     margin-right: 30px;
 }
 .right{
@@ -56,22 +51,22 @@ main{
     width: 200px;
     height: auto;
     padding: 10px 0 0 0;
-  }
+}
+
 .fa{
     display: inline-block;
-  }
+}
+
 .image{
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
+    margin:20px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 1px solid gray;
     display: inline-block;
     padding: 3px;
     border: 3px solid #d2d6de;
-    margin-top: 20px;
-    margin-right: 57px;
-    margin-left: 57px;
+
   
 }
 .has-feedback .form-control {
@@ -80,6 +75,11 @@ main{
 select[multiple], select[size] {
       height: auto;
 }
+
+#inputSexo{
+    margin-left: 20px;
+}
+
 .form-control {
       border-radius: 0;
       box-shadow: none;
@@ -96,6 +96,11 @@ select[multiple], select[size] {
       background-image: none;
       border: 1px solid #ccc;
 }
+
+#formContainer{
+    margin-top: 20px;
+}
+
 label {
     cursor: default;
 }
@@ -113,7 +118,7 @@ label {
       text-align: center;
 }
 .btn{
-    margin: 0 auto;
+    margin: 20px auto 0;
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
@@ -124,7 +129,6 @@ label {
     vertical-align: middle;
     cursor: pointer;
     touch-action: manipulation;
-    margin-top: 100px;
 }
 a {
       color: var(--color3);
@@ -139,7 +143,7 @@ a {
       display: block;
       border-radius: 20px;
 }
-.usuername{
+h3{
       font-family: pulang
 }
   
@@ -177,54 +181,24 @@ a {
     padding: 10px;
 }
 
-.add{
-    font-size: 13px;
-    color: red;
+.si{
+    margin: 10px auto;
+    width: 100px;
+    padding: 5px;
+    background-color: var(--color1);
+    border-radius: 8px;
 }
 
-.si{
+#img, #submit{
     display: none;
 }
 
-.preview{
+.on{
     display: block;
 }
 
-.msg{
-    color: red;
-    margin: 20px auto;
-}
-
-.petImg{
-    width: 100px;
-    height: 100px;
-}
-
-.info{
-    display: flex;
-    gap: 15px;
-    align-self: center;
-    width: auto;
-    height: auto;
-    color: #fff;
-    padding: 10px;
-    background-color: var(--color4);
-    border-radius: 8px 5px;
-}
-
-.tittle{
-    font-weight: 600;
-}
-
-.space{
-    padding: 0 10px;
-}
-
-.warning{
-    text-decoration: none;
-    color: red;
-    font-size: 15px;
-    padding: 5px;
+.margin{
+    margin-top: 20px;
 }
 
   

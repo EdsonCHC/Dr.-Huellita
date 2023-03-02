@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $conn =mysqli_connect('localhost', 'root','','drhuellita');
+    $id = $_SESSION["user_info"][9];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +27,6 @@
         <div class="left box-primary">
           <img class="image" src="../img/logo.png" alt="imgUser" id="img-preview" />
           <h3 class="username text-center"><?php echo $_SESSION["user_info"][0]?> <?php echo $_SESSION["user_info"][1]?> </h3>
-        </form>
         </div>
         <div class="right tab-content">
           <form class="form-horizontal">
@@ -88,6 +89,65 @@
           </form>
         </div>
       </div>
+      <div class="mascotas">
+        <h2>Tus Mascotas</h2>
+      <?php
+
+        $select = mysqli_query($conn, "SELECT * FROM `mascotas` WHERE `id_dueño` = $id ORDER BY id DESC");
+        if($select->num_rows > 0) {
+            while ($filas=mysqli_fetch_assoc($select)){
+                ?>
+            <div class="colum-content">
+                
+                <div class="pet_info">
+                <div class="info">
+                <img src="data:Image/*;base64, <?php echo base64_encode($filas["img"])?>" class="petImg">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th><?php echo $filas["Names"]?></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="tittle">Mascota</td>
+                      <td class="space">=</td>
+                      <td><?php echo $filas["Pets"]?></td>
+                    </tr>
+                    <tr>
+                      <td class="tittle">Edad</td>
+                      <td class="space">=</td>
+                      <td><?php echo $filas["Ages"]?></td>
+                    </tr>
+                    <tr>
+                      <td class="tittle">Sexo</td>
+                      <td class="space">=</td>
+                      <td><?php echo $filas["Sex"]?></td>
+                    </tr>
+                    <tr>
+                      <td class="tittle">Raza</td>
+                      <td class="space">=</td>
+                      <td><?php echo $filas["Raza"]?></td>
+                    </tr>
+                    </tbody>
+                      <tfoot>
+                        <th>
+                          <a href="../php/Del.php?id=<?php echo $filas["id"]?>" class="warning">ELIMINAR</a>
+                        </th>
+                      </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+                <?php
+            }
+        }else{
+            ?>
+            <h3 class="msg">Todavía No añades una mascota</h3>
+            <?php
+        }
+        ?>
+        </div>
     </main>
     <!-- import footer -->
     <?php
@@ -95,7 +155,6 @@
     ?>
 
     <script src="../js/toggle.js"></script>
-    <script src="../js/preview.js"></script>
   </body>
 
 </html>
