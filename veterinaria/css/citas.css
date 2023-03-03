@@ -2,7 +2,7 @@
 @import url(../css/colors.css);
 @import url(../css/fonts.css);
 @import url(../css/footer.css);
-
+@import url(../css/scroll.css);
 
 *, html{
     box-sizing: border-box;
