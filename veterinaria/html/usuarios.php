@@ -131,9 +131,11 @@
                     </tr>
                     </tbody>
                       <tfoot>
-                        <th>
-                          <a href="../php/Del.php?id=<?php echo $filas["id"]?>" class="warning">ELIMINAR</a>
-                        </th>
+                        <tr>
+                          <th>
+                          <a href="../php/Del.php?id=<?php echo $filas["id"]?>" class="warning">ELIMINAR  </a><a href="../html/Update.php?id=<?php echo $filas["id"]?>" class="warning">  DATOS</a>
+                          </th>
+                        </tr>
                       </tfoot>
                   </table>
                 </div>

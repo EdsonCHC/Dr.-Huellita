@@ -203,7 +203,7 @@ a {
 .info{
     display: flex;
     gap: 15px;
-    align-self: center;
+    align-items: center;
     width: auto;
     height: auto;
     color: #fff;
@@ -211,6 +211,10 @@ a {
     background-color: var(--color4);
     border-radius: 8px 5px;
 }
+
+/* .info tfoot{
+    display: flex;
+} */
 
 .tittle{
     font-weight: 600;
