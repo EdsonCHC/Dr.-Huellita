@@ -12,7 +12,7 @@
           <li class="navLI <?php esconderv2(); ?>"><a href="./signUP.php">Registrase</a></li>
           <li class="navLI <?php esconderv2(); ?>"><a href="./Login.php">Iniciar Sesión</a></li>
           <li class="navLI <?php esconder(); ?>"><div id="user-pic" onclick="toggleMenu()"><img src="../icons/user.png" alt="user"></div></li>
-          <li class="navLI"><a class="cita" href="#cita">Cita</a></li>
+          <li class="navLI"><a class="cita" href="../html/citas.php">Cita</a></li>
     </ul>
     <div class="user-config" id="subMenu">
         <div id="userInfo">

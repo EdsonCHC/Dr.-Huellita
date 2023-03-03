@@ -2,6 +2,7 @@
 @import url(../css/colors.css);
 @import url(../css/fonts.css);
 @import url(../css/footer.css);
+@import url(../css/scroll.css);
 
 *, html{
 
@@ -16,20 +17,8 @@ body{
 }
 
 
-/*scrollbar*/
-::-webkit-scrollbar{
-    width: 5px;
-    }
-    
-    ::-webkit-scrollbar-track{
-    border: 5px solid var(--color1)
-    }
-    
-    ::-webkit-scrollbar-thumb{
-    background: var(--color3)
-}
-/*usuario*/
 
+/*usuario*/
 
 main{
     margin: 100px auto 30px;
@@ -196,12 +185,23 @@ a {
 }
 
 .petImg{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 150px;
+    border-radius: 4px;
+}
+
+.colunm-content{
+    max-width: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .info{
     display: flex;
+    flex-direction: column;
     gap: 15px;
     align-items: center;
     width: auto;
@@ -210,6 +210,12 @@ a {
     padding: 10px;
     background-color: var(--color4);
     border-radius: 8px 5px;
+}
+
+.info table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* .info tfoot{
@@ -224,10 +230,16 @@ a {
     padding: 0 10px;
 }
 
+.funcs{
+    background-color: #fff;
+    border-radius: 3px;
+}
+
 .warning{
     text-decoration: none;
     color: red;
     font-size: 15px;
+    font-weight: 600;
     padding: 5px;
 }
 
