@@ -2,7 +2,6 @@
 @import url(../css/colors.css);
 @import url(../css/fonts.css);
 @import url(../css/footer.css);
-@import url(../css/scroll.css);
 
 *, html{
 
@@ -17,26 +16,34 @@ body{
 }
 
 
-
+/*scrollbar*/
+::-webkit-scrollbar{
+    width: 5px;
+    }
+    
+    ::-webkit-scrollbar-track{
+    border: 5px solid var(--color1)
+    }
+    
+    ::-webkit-scrollbar-thumb{
+    background: var(--color3)
+}
 /*usuario*/
+
 
 main{
     margin: 100px auto 30px;
-    position: relative;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
 }
 
 .container{
-  margin: 20px;
+  margin: 0 auto;
   display: table;
 }
 
 .left{
     float: left;
-    width: 225px;
-    height: 350px;
+    width: 250px;
+    height: auto;
     margin-right: 30px;
 }
 .right{
@@ -44,22 +51,22 @@ main{
     width: 200px;
     height: auto;
     padding: 10px 0 0 0;
-  }
+}
+
 .fa{
     display: inline-block;
-  }
+}
+
 .image{
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
+    margin:20px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 1px solid gray;
     display: inline-block;
     padding: 3px;
     border: 3px solid #d2d6de;
-    margin-top: 20px;
-    margin-right: 57px;
-    margin-left: 57px;
+
   
 }
 .has-feedback .form-control {
@@ -68,6 +75,11 @@ main{
 select[multiple], select[size] {
       height: auto;
 }
+
+#inputSexo{
+    margin-left: 20px;
+}
+
 .form-control {
       border-radius: 0;
       box-shadow: none;
@@ -84,6 +96,11 @@ select[multiple], select[size] {
       background-image: none;
       border: 1px solid #ccc;
 }
+
+#formContainer{
+    margin-top: 20px;
+}
+
 label {
     cursor: default;
 }
@@ -101,7 +118,7 @@ label {
       text-align: center;
 }
 .btn{
-    margin: 0 auto;
+    margin: 20px auto 0;
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
@@ -112,7 +129,6 @@ label {
     vertical-align: middle;
     cursor: pointer;
     touch-action: manipulation;
-    margin-top: 100px;
 }
 a {
       color: var(--color3);
@@ -126,8 +142,11 @@ a {
       background-color: var(--color3);
       display: block;
       border-radius: 20px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
 }
-.usuername{
+h3{
       font-family: pulang
 }
   
@@ -153,6 +172,8 @@ a {
       
 }
 .left {
+    position: relative;
+    top: 100px;
     border-radius: 3px;
     background: #ffffff;
     border-top: 3px solid #d2d6de;
@@ -165,110 +186,6 @@ a {
     padding: 10px;
 }
 
-.add{
-    font-size: 13px;
-    color: red;
-}
-
-.si{
+#submit{
     display: none;
 }
-
-.preview{
-    display: block;
-}
-
-.msg{
-    color: red;
-    margin: 20px auto;
-}
-
-.petImg{
-    width: 200px;
-    height: 150px;
-    border-radius: 4px;
-}
-
-.colum-content{
-    max-width: 600px;
-    max-height: 750px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding: 10px;
-}
-
-.info{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    width: auto;
-    height: auto;
-    color: #fff;
-    padding: 10px;
-    background-color: var(--color4);
-    border-radius: 8px 5px;
-    margin: 0 0 10px 0;
-}
-
-.info table{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tittle{
-    font-weight: 600;
-}
-
-.space{
-    padding: 0 10px;
-}
-
-.funcs{
-    background-color: #fff;
-    border-radius: 3px;
-}
-
-.warning{
-    text-decoration: none;
-    color: red;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 5px;
-}
-
-/* Estilos tabla citas */
-
-.citas{
-    padding: 10px;
-    max-width: 600px;
-    max-height: 750px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-#tableCita{
-    line-height: 50px;
-}
-
-#tableCita tr:nth-child(1) td{
-    border-top: 2px solid black;
-    font-weight: 600;
-}
-
-#tableCita td{
-    border-bottom: 2px solid black;
-    max-width: 130px;
-    border-left: 2px solid black;
-    padding: 0 10px;
-}
-
-#tableCita td:nth-child(5){
-    border-right: 2px solid black;;
-}
-
-
-
-
-  

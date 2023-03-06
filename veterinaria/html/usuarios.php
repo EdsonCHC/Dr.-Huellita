@@ -2,6 +2,7 @@
 session_start();
 $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
 $id = $_SESSION["user_info"][9];
+$numero = 1;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,13 +26,6 @@ $id = $_SESSION["user_info"][9];
   <body>
     <main>
       <div class="container">
-        <div class="left box-primary">
-          <img class="image" src="../img/logo.png" alt="imgUser" id="img-preview" />
-          <h3 class="username text-center">
-            <?php echo $_SESSION["user_info"][0] ?>
-            <?php echo $_SESSION["user_info"][1] ?>
-          </h3>
-        </div>
         <div class="right tab-content">
           <form class="form-horizontal">
             <div class="form-group">
@@ -104,15 +98,14 @@ $id = $_SESSION["user_info"][9];
       </div>
       </div>
       <div class="mascotas">
-        <h2>Tus Mascotas</h2>
-        <?php
+        <div class="colum-content">
+          <h2>Tus Mascotas</h2>
+          <?php
 
-        $select = mysqli_query($conn, "SELECT * FROM `mascotas` WHERE `id_dueño` = $id ORDER BY id DESC");
-        if ($select->num_rows > 0) {
-          while ($filas = mysqli_fetch_assoc($select)) {
-            ?>
-            <div class="colum-content">
-
+          $select = mysqli_query($conn, "SELECT * FROM `mascotas` WHERE `id_dueño` = $id ORDER BY id DESC");
+          if ($select->num_rows > 0) {
+            while ($filas = mysqli_fetch_assoc($select)) {
+              ?>
               <div class="pet_info">
                 <div class="info">
                   <img src="data:Image/*;base64, <?php echo base64_encode($filas["img"]) ?>" class="petImg">
@@ -158,18 +151,53 @@ $id = $_SESSION["user_info"][9];
                   <div class="funcs">
                     <a href="../php/Del.php?id=<?php echo $filas["id"] ?>" class="warning">ELIMINAR </a>
                     <a href="../html/Update.php?id=<?php echo $filas["id"] ?>" class="warning">EDITAR</a>
+                    <a href="../html/historiaPet.php?id=<?php echo $filas["id"] ?>" class="warning">HISTORIAL</a>
                   </div>
                 </div>
               </div>
-            </div>
+              <?php
+            }
+          } else {
+            ?>
+            <h3 class="msg">Todavía No añades una mascota</h3>
             <?php
           }
-        } else {
           ?>
-          <h3 class="msg">Todavía No añades una mascota</h3>
+        </div>
+      </div>
+      <div class="citas">
+        <h2>Tus Citas</h2>
+        <table id="tableCita">
+          <tr>
+            <td>#</td>
+            <td>Fecha</td>
+            <td>Mascota</td>
+            <td>Horario</td>
+            <td>Motivo</td>
+          </tr>
           <?php
-        }
-        ?>
+
+          $cita = mysqli_query($conn, "SELECT * FROM `cita` WHERE `id_user` = $id ORDER BY id ASC");
+          if ($cita->num_rows > 0) {
+            while ($citas = mysqli_fetch_assoc($cita)) {
+              ?>
+                <tr>
+                  <td><?php echo $numero ?></td>
+                  <td><?php echo $citas["Fecha"] ?></td>
+                  <td><?php echo $citas["Pet"] ?></td>
+                  <td><?php echo $citas["Horario"] ?></td>
+                  <td><?php echo $citas["Descripcion"] ?></td>
+                </tr>
+            <?php
+            $numero ++;
+            }
+          } else {
+            ?>
+            <p>No tienes citas programadas</p>
+            <?php
+          }
+          ?>
+       </table>
       </div>
     </main>
     <!-- import footer -->

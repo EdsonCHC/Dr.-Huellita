@@ -15,3 +15,5 @@ let vista_preliminar = (event)=> {
 
 
 
+
+

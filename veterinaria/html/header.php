@@ -3,7 +3,7 @@
 ?>
 <div class="headerContainer">
     <div class="logo">
-      <img src="../img/logo.png" class="logo"></a>
+      <img src="../img/logo.png" class="logo">
     </div>
     <ul class="headUl">
           <li class="navLI"><a href="./index.php">Inicio</a></li>
@@ -19,7 +19,6 @@
             <h2><?php echo $_SESSION["user_info"][0]?> <?php echo $_SESSION["user_info"][1]?></h2>
             <hr>
             <a href="../html/usuarios.php" class="listUser"><i><img class="userIcon" src="../icons/setting.png" alt="settings"></i><p>Cuenta</p> <span class="arrow">></span></a>
-            <a href="" class="listUser"><i><img class="userIcon" src="../icons/plus-symbol-button.png" alt="quote"></i><p>Hacer Cita</p> <span class="arrow">></span></a>
             <a href="../html/pet.php" class="listUser"><i><img class="userIcon" src="../icons/pawprint.png" alt="pet"></i><p>Mascotas</p> <span class="arrow">></span></a>
             <a href="../php/logout.php" class="listUser"><i><img class="userIcon" src="../icons/logout.png" alt="logout"></i><p>Cerra Sesión</p> <span class="arrow">></span></a>
         </div>

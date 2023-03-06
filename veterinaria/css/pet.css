@@ -142,6 +142,9 @@ a {
       background-color: var(--color3);
       display: block;
       border-radius: 20px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
 }
 h3{
       font-family: pulang
@@ -189,8 +192,13 @@ h3{
     border-radius: 8px;
 }
 
-#img, #submit{
+#submit{
     display: none;
+}
+
+#archivo{
+    width: 132px;
+    overflow-x: hidden;
 }
 
 .on{
@@ -199,6 +207,18 @@ h3{
 
 .margin{
     margin-top: 20px;
+}
+
+/*VAlIDATION*/
+
+.warnings{
+    color: red;
+    font-weight: 600;
+}
+
+.warningss{
+    color: red;
+    font-weight: 600;
 }
 
   

@@ -94,3 +94,12 @@ input {
     width: 20px;
     height: 15px;
 }
+
+/* VALIDATION */
+
+.warnings{
+    color: red;
+    font-weight: 600;
+    position:relative; 
+    top: -10px;
+}

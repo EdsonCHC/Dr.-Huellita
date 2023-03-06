@@ -8,7 +8,7 @@
     }else{
         $mensaje ="Ha ocurrido un error inesperado, inténtalo mas tarde";
         echo "<script> alert('$mensaje');
-        window.location.href='../html/acount.php';
+        window.location.href='../html/index.php';
         </script>";
     }
 ?>

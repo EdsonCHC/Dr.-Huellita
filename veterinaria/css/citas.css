@@ -35,8 +35,8 @@ main{
 /* EStilos formulario */
 
 .campos{
-    display: flex;
-    gap: 20px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 fieldset {
@@ -63,7 +63,7 @@ input, textarea {
     padding: 5px;
 }
 
-.campos h1 {
+#cita h1 {
     margin: 0.3em auto;
     text-align: center;
     font-weight: 100;
@@ -83,3 +83,21 @@ input, textarea {
     height: 30px;
     background-color: var(--color2);
 }
+
+.radio{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"]{
+    position: relative;
+    width: 10%;
+    top: -10px;
+}
+
+#displayOther{
+    display: none;
+}
+
+

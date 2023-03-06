@@ -1,5 +1,10 @@
 <?php
 session_start();
+$conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
+$id = $_SESSION["user_info"][9];
+if(!isset($_SESSION["user_info"])){
+    header("Location: ../html/Login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,63 +28,43 @@ session_start();
     <main>
         <div id="cita">
             <h1>Realice su cita</h1>
-            <form action="" method="post">
+            <form action="../php/citas.php?id=<?php echo $id?>" method="post">
                 <div class="campos">
                     <fieldset>
-                        <label for="nombreP">
-                            Nombre Del Dueño
-                            <input type="text" />
-                        </label>
-                        <label for="numTel">
-                            Numero de Teléfono
-                            <input type="tel">
-                        </label>
-                        <p class="warnings" id="warnings"></p>
-                    </fieldset>
-                    <fieldset>
                         <label for="sint">
-                            Síntomas del animal <sub>esto debe ser necesario?</sub>
-                            <textarea name="síntomas" id="sint" cols="30" rows="5"></textarea>
+                            Síntomas del animal <sub>O razon por la cual realiza la cita</sub>
+                            <textarea name="síntomas" id="sint" cols="30" rows="5" required></textarea>
                         </label>
                         <label for="date">
                             Seleccionar fecha
-                            <input type="date">
+                            <input type="date" name="fecha" required>
                         </label>
-                        <label for="time" class="labels">
+                        <label for="time" class="labels" required>
                             Horario
-                            <select name="horario" id="time">
-                                <option value="" selected disable></option>
-                                <option value="Mañana">Por La Mañana</option>
-                                <option value="Tarde">Por la Tarde</option>
+                            <select name="horario" id="time" required>
+                                <option value="" selected disable ></option>
+                                <option value="Por la Mañana">Por La Mañana</option>
+                                <option value="Por la Tarde">Por la Tarde</option>
                             </select>
                         </label>
                         <p>Seleccione su mascota</p>
-                        <label for="dog">
-                            <input type="radio" name="animal" id="dog">
-                            Perro
-                        </label>
-                        <label for="cat">
-                            <input type="radio" name="animal" id="dog">
-                            Gato
-                        </label>
-                        </label>
-                        <label for="other">
-                            <input type="radio" name="animal" id="other">
-                            Gato
-                        </label>
-                        <label for="mascotaList" id="displayOther">
-                            <input list="List" id="mascotaList">
-                            <datalist id="List">
-                                <option value="mascota 1"></option>
-                                <option value="mascota 2"></option>
-                                <option value="mascota 5"></option>
-                                <option value="mascota 6"></option>
-                                <option value="mascota 7"></option>
-                                <option value="mascota 8"></option>
-                                <option value="mascota 9"></option>
-                                <option value="mascota 10"></option>
-                            </datalist>
-                        </label>
+                        <select name="mascotas" id="pets">
+                            <option value="" selected disable></option>
+                            <?php
+                                $select = mysqli_query($conn, "SELECT * FROM `mascotas` WHERE `id_dueño` = $id ORDER BY id DESC");
+                                if ($select->num_rows > 0) {
+                                    while ($filas = mysqli_fetch_assoc($select)) {
+                            ?>
+                            <option value="<?php echo $filas["Names"] ?>"><?php echo $filas["Names"] ?></option>
+                            <?php
+                                    }
+                                } else {
+                            ?>
+                                <h3 class="msg">Todavía No añades una mascota</h3>
+                            <?php
+                            }
+                            ?>
+                        </select>
                     </fieldset>
                 </div>
                 <label for="button" id="labelS">
@@ -94,8 +79,9 @@ session_start();
     <?php
         include('../html/footer.php');
     ?>
-
+    
     <script src="../js/toggle.js"></script>
+    <script src="../js/valCita.js"></script>
 </body>
 
 </html>

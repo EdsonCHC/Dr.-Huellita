@@ -1,11 +1,11 @@
 <?php
-// session_start();
-// if (!isset($_SESSION["doctor_info"])) {
-//     header("Location: ../html/doctor.php");
-// }
+session_start();
+if (!isset($_SESSION["doctor_info"])) {
+    header("Location: ../html/doctor.php");
+}
     $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
     $numero = 1;
-    // $user = $_SESSION["doctor_info"][7];
+    $user = $_SESSION["doctor_info"][7];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@
         <div class="logo">
             <img src="../img/logo.png" class="logo">
         </div>
-        <!-- <div id="doctorInfo">
+        <div id="doctorInfo">
             <h3>
                 <?php echo $_SESSION["doctor_info"][0] ?>
                 <?php echo $_SESSION["doctor_info"][1] ?>
@@ -38,12 +38,12 @@
         <div class="logout">
             <a href="../php/logoutDoctor.php" class="listUser"><i><img class="userIcon" src="../icons/logout.png"
                         alt="logout"></i></a>
-        </div> -->
+        </div>
     </header>
     <main>
         <div class="citas" id="citaAsig">
             <div class="title" id="divCitas">
-                <h2>Citas Registradas</h2>
+                <h2>Citas Asignadas</h2>
             </div>
             <div>
                 <table class="tableCita">
@@ -57,11 +57,11 @@
                         <td>Animal</td>
                         <td># Animal</td>
                         <td>Descripción</td>
-                        <td>Asignar Doctor</td>
+                        <td>Historial</td>
                     </tr>
                     <?php
 
-                    $citas = mysqli_query($conn, "SELECT * FROM `cita`");
+                    $citas = mysqli_query($conn, "SELECT * FROM `cita` WHERE `doctorUser` = '$user'  ORDER BY id DESC");
                     if ($citas->num_rows > 0) {
                         while ($datos = mysqli_fetch_assoc($citas)) {
                             ?>
@@ -94,7 +94,7 @@
                                     <?php echo $datos["Descripcion"] ?>
                                 </td>
                                 <td>
-                                    <input list="doctores">
+                                    <a href="../html/histo.php?id=<?php echo $datos["id_pet"] ?>&id_dueño=<?php echo $datos["id_user"] ?>">Crear</a>
                                 </td>
 
                             </tr>
