@@ -26,6 +26,7 @@ main{
     display: flex;
     gap: 40px;
     justify-content: center;
+    left: 100px;
 }
 
 .container{
@@ -180,7 +181,8 @@ a {
 
 .msg{
     color: red;
-    margin: 20px auto;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .petImg{
@@ -264,8 +266,18 @@ a {
     padding: 0 10px;
 }
 
-#tableCita td:nth-child(5){
+#tableCita td:nth-child(6){
     border-right: 2px solid black;;
+}
+
+
+/* BOTON ELIMINAR CITA */
+a.Del{
+    text-decoration: none;
+    padding: 5px;
+    background-color: var(--color2);
+    color: black;
+    border-radius: 8px 5px;
 }
 
 

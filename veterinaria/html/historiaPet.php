@@ -113,7 +113,7 @@
             
                     }else{
                         ?>
-                        <h3>Esta Mascota aun no tiene un historial medico</h3>
+                        <h3 class="msg">Esta Mascota aun no tiene un historial medico</h3>
                     <?php
 
                         }

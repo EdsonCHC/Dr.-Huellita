@@ -1,11 +1,8 @@
 <?php
-// session_start();
-// if (!isset($_SESSION["doctor_info"])) {
-//     header("Location: ../html/doctor.php");
-// }
+
     $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
     $numero = 1;
-    // $user = $_SESSION["doctor_info"][7];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/doctor.css">
-    <title>Sistema Doctor</title>
+    <title>Admin</title>
     <link rel="shortcut icon" href="../img/logo.png">
 </head>
 
@@ -24,28 +21,13 @@
         <div class="logo">
             <img src="../img/logo.png" class="logo">
         </div>
-        <!-- <div id="doctorInfo">
-            <h3>
-                <?php echo $_SESSION["doctor_info"][0] ?>
-                <?php echo $_SESSION["doctor_info"][1] ?>
-            </h3>
-            <div>
-                <h4>
-                    <?php echo $_SESSION["doctor_info"][7] ?>
-                </h4>
-            </div>
-        </div>
-        <div class="logout">
-            <a href="../php/logoutDoctor.php" class="listUser"><i><img class="userIcon" src="../icons/logout.png"
-                        alt="logout"></i></a>
-        </div> -->
     </header>
     <main>
         <div class="citas" id="citaAsig">
             <div class="title" id="divCitas">
                 <h2>Citas Registradas</h2>
             </div>
-            <div>
+            <div class="cites">
                 <table class="tableCita">
                     <tr>
                         <td>#</td>
@@ -57,7 +39,8 @@
                         <td>Animal</td>
                         <td># Animal</td>
                         <td>Descripción</td>
-                        <td>Asignar Doctor</td>
+                        <td>Doctor</td>
+                        <td>ELIMINAR CITA</td>
                     </tr>
                     <?php
 
@@ -94,19 +77,45 @@
                                     <?php echo $datos["Descripcion"] ?>
                                 </td>
                                 <td>
-                                    <input list="doctores">
+                                <?php echo $datos["doctorUser"] ?>
+                                    <form action="../php/asigCita.php?idPet=<?php echo $datos["id_pet"] ?>&id=<?php echo $datos["id"] ?>" method="POST">
+                                    <input list="doctores" name="doctor" required>
+                                    <input type="submit" value="Asignar">
+                                    </form>
+                                </td>
+                                <td>
+                                    <a class="Del" href="../php/DelCita.php">ELIMINAR</a>
                                 </td>
 
                             </tr>
                             <?php
                             $numero++;
                         }
-                    }  ?>
+                        
+                    }else{
+                        ?>
+                        <h3 class="msg">No se han registrado citas en la clínica</h3>
+                    <?php
+
+                        }
+                    ?>
                 </table>
             </div>
         </div>
         </div>
     </main>
+    <datalist id="doctores">
+        <?php
+    $doctores = mysqli_query($conn, "SELECT * FROM `doctors` Where `id` != 5");
+        if ($doctores->num_rows > 0) {
+            while ($docs = mysqli_fetch_assoc($doctores)) {
+              ?>
+              <option value="<?php echo $docs["Nombre"]?>"></option>
+              <?php
+            }
+        }
+        ?>
+    </datalist>
     <!-- import footer -->
     <?php
     include('../html/footer.php');

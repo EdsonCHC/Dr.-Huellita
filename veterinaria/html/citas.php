@@ -48,7 +48,7 @@ if(!isset($_SESSION["user_info"])){
                             </select>
                         </label>
                         <p>Seleccione su mascota</p>
-                        <select name="mascotas" id="pets">
+                        <select name="mascotas" id="pets" required>
                             <option value="" selected disable></option>
                             <?php
                                 $select = mysqli_query($conn, "SELECT * FROM `mascotas` WHERE `id_dueño` = $id ORDER BY id DESC");
@@ -60,7 +60,7 @@ if(!isset($_SESSION["user_info"])){
                                     }
                                 } else {
                             ?>
-                                <h3 class="msg">Todavía No añades una mascota</h3>
+                                <option selected disable>Aun no añades una mascota</option>
                             <?php
                             }
                             ?>

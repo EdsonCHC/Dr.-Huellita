@@ -4,7 +4,7 @@ if (!isset($_SESSION["doctor_info"])) {
     header("Location: ../html/doctor.php");
 }
 $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
-$user = $_SESSION["doctor_info"][7];
+$user = $_SESSION["doctor_info"][6];
 $id = $_GET['id'];
 $id_dueño = $_GET['id_dueño'];
 $select = mysqli_query($conn, "SELECT * FROM `mascotas` WHERE `id` = $id");
@@ -54,7 +54,7 @@ $info = mysqli_fetch_assoc($cita);
         <div class="left box-primary">
             <h3>Paciente</h3>
             <img class="image" src="data:Image/*;base64, <?php echo base64_encode($filas["img"])?>" alt="imgUser" id="img-preview" />
-            <form action="../php/historial.php" method="POST">
+            <form action="../php/historial.php?idDoctor=<?php echo $user ?>&id=<?php echo $id ?>" method="POST">
                 <div class="form-group margin">
                     <label for="inputAnimal" class="col-sm-2 control-label">Mascota</label>
                     <div class="col-sm-10">

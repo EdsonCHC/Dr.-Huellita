@@ -4,6 +4,7 @@
     $id = $_GET['id'];
     $select = mysqli_query($conn, "SELECT * FROM `mascotas` WHERE `id` = $id");
     $filas = mysqli_fetch_assoc($select);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">

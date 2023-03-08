@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Doctor.css">
     <link rel="stylesheet" href="../css/Login.css">
     <title>Entrar Sistema</title>
     <link rel="shortcut icon" href="../img/logo.png">
@@ -19,11 +20,11 @@
 <body>
 
     <!-- import header -->
-    <?php
-
-    include("../html/header.php");
-    ?>
-
+    <header>
+    <div class="logo">
+            <img src="../img/logo.png" class="logo">
+        </div>
+    </header>    
     <div id="container">
         <form action="../php/doctorLogin.php" method="post" id="formulario">
             <h1>Iniciar Sesion <span id="point">´</span></h1>

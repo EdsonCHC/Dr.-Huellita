@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION["user_info"])){
+  header("Location: ../html/index.php");
+}
 $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
 $id = $_SESSION["user_info"][9];
 $numero = 1;
@@ -174,6 +177,7 @@ $numero = 1;
             <td>Mascota</td>
             <td>Horario</td>
             <td>Motivo</td>
+            <td>ELIMINAR</td>
           </tr>
           <?php
 
@@ -187,13 +191,14 @@ $numero = 1;
                   <td><?php echo $citas["Pet"] ?></td>
                   <td><?php echo $citas["Horario"] ?></td>
                   <td><?php echo $citas["Descripcion"] ?></td>
+                  <td><a class="Del" href="../php/DelCita.php?id=<?php echo $citas["id"] ?>">ELIMINAR</a></td>
                 </tr>
             <?php
             $numero ++;
             }
           } else {
             ?>
-            <p>No tienes citas programadas</p>
+            <h3 class="msg">No tienes citas programadas</h3>
             <?php
           }
           ?>

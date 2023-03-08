@@ -38,7 +38,7 @@
                     <img class="animal" src="../img/xd.png" alt="imagen sobre nosotros">
                 </div>
                 <div class="cont">
-                    <p class="txt">Dr. Huellita, situada en el C.C. cuenta con las instalaciones
+                    <p class="txt">Dr. Huellita cuenta con las instalaciones
                         más modernas y todos los servicios médicos que necesitas para cuidar la
                         salud y el bienestar de tu mejor amigo. </p>
                 </div>

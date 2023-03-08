@@ -5,7 +5,7 @@ if (!isset($_SESSION["doctor_info"])) {
 }
     $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
     $numero = 1;
-    $user = $_SESSION["doctor_info"][7];
+    $user = $_SESSION["doctor_info"][6];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +61,7 @@ if (!isset($_SESSION["doctor_info"])) {
                     </tr>
                     <?php
 
-                    $citas = mysqli_query($conn, "SELECT * FROM `cita` WHERE `doctorUser` = '$user'  ORDER BY id DESC");
+                    $citas = mysqli_query($conn, "SELECT * FROM `cita` WHERE `doctorID` = '$user'  ORDER BY id DESC");
                     if ($citas->num_rows > 0) {
                         while ($datos = mysqli_fetch_assoc($citas)) {
                             ?>
@@ -101,7 +101,13 @@ if (!isset($_SESSION["doctor_info"])) {
                             <?php
                             $numero++;
                         }
-                    }  ?>
+                    }else{
+                        ?>
+                        <h3 class="msg">No tienes Citas Asignadas</h3>
+                    <?php
+
+                        }
+                    ?>
                 </table>
             </div>
         </div>

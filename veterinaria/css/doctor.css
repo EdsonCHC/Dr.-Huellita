@@ -57,7 +57,7 @@ header{
 /* ESTILOS CONTENIDO */
 main{   
     width: 80%;
-    margin: 50px auto 30px;
+    margin: 20px auto 30px;
     padding: 10px;
     position: relative;
     left: 50px;
@@ -70,11 +70,13 @@ main{
     background-color: var(--color6);
     border-radius: 10px 8px;
     cursor: pointer;
+    overflow: hidden;
 }
 
-.citas{
+.cites{
     overflow-x: hidden;
     overflow-y: scroll;
+    height: 100%;
 }
 
 .history{
@@ -82,6 +84,7 @@ main{
 }
 
 .tableCita{
+    text-align: center;
     line-height: 50px;
     width: 100%;
 }
@@ -96,13 +99,22 @@ main{
 
 .tableCita td{
     border-bottom: 2px solid black;
-    max-width: 130px;
+    max-width: 115px;
     border-left: 2px solid black;
     padding: 0 10px;
 }
 
 .tableCita td:nth-child(10){
     border-right: 2px solid black;;
+}
+
+.tableCita input[type="submit"]{
+    padding: 5px;
+    border: none;
+    color: #fff;
+    background-color: red;
+    border-radius: 5px;
+    font-weight: 800;
 }
 
 .title{
@@ -120,6 +132,22 @@ main{
     z-index: 3;
 }
 
+input{
+    width: 100%;
+}
+
+a.Del{
+    text-decoration: none;
+    padding: 5px;
+    background-color: var(--color2);
+    color: black;
+    border-radius: 8px 5px;
+}
 
 
+.msg{
+    text-align: center;
+    color: red;
+    margin: 10px auto;
+}
 
