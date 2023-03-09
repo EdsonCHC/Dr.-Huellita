@@ -99,7 +99,8 @@ main{
 
 .tableCita td{
     border-bottom: 2px solid black;
-    max-width: 115px;
+    width: 115px;
+    min-width: 115px;
     border-left: 2px solid black;
     padding: 0 10px;
 }
@@ -150,4 +151,3 @@ a.Del{
     color: red;
     margin: 10px auto;
 }
-

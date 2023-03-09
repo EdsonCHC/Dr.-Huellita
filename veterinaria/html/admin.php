@@ -27,8 +27,11 @@
             <div class="title" id="divCitas">
                 <h2>Citas Registradas</h2>
             </div>
+            <form>
+                <input class="light-table-filter" type="search" placeholder="Buscar Cita"  id="Search" data-table="data-table">
+            </form>
             <div class="cites">
-                <table class="tableCita">
+                <table class="tableCita data-table">
                     <tr>
                         <td>#</td>
                         <td>Fecha</td>
@@ -120,7 +123,7 @@
     <?php
     include('../html/footer.php');
     ?>
-    <!-- <script src="../js/toggleCitas.js"></script> -->
+    <script src="../js/search.js"></script>
 </body>
 
 </html>
