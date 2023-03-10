@@ -133,6 +133,7 @@ $numero = 1;
                         <td class="space">=</td>
                         <td>
                           <?php echo $filas["Ages"] ?>
+                          Meses 
                         </td>
                       </tr>
                       <tr>

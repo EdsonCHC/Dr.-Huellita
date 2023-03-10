@@ -50,9 +50,9 @@
                   <p class="warnings" id="warnings2"></p>
                 </div>
                 <div class="form-group">
-                  <label for="inputAge" class="col-sm-2 control-label">Edad</label>
+                  <label for="inputAge" class="col-sm-2 control-label">Edad <sub>En meses</sub></label>
                   <div class="col-sm-10">
-                    <input type="number" class="form-control" id="inputAge" max="14" min="1" name="age" placeholder="<?php echo $filas["Ages"] ?>" required>
+                    <input type="number" class="form-control" id="inputAge" max="100" min="1" name="age" placeholder="<?php echo $filas["Ages"] ?>" required>
                   </div>
                   <p class="warnings" id="warnings3"></p>
                 </div>

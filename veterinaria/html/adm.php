@@ -1,7 +1,7 @@
 <?php 
     session_start();
- if(isset($_SESSION["doctor_info"])){
-    header("Location: ../html/doctorCitas.php");
+    if(isset($_SESSION["adm_info"])){
+    header("Location: ../html/admin.php");
 }
 ?>
 <!DOCTYPE html>
@@ -26,8 +26,8 @@
         </div>
     </header>    
     <div id="container">
-        <form action="../php/doctorLogin.php" method="post" id="formulario">
-            <h1>Bienvenido Veterinario<span id="point"></span></h1>
+        <form action="../php/admLo.php" method="post" id="formulario">
+            <h1>Bienvenido Admin <span id="point"></span></h1>
             <fieldset>
                 <label for="txt">
                     Usuario

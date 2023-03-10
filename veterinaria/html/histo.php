@@ -6,6 +6,7 @@ if (!isset($_SESSION["doctor_info"])) {
 $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
 $user = $_SESSION["doctor_info"][6];
 $id = $_GET['id'];
+$idCita = $_GET['idCita'];
 $id_dueño = $_GET['id_dueño'];
 $select = mysqli_query($conn, "SELECT * FROM `mascotas` WHERE `id` = $id");
 $filas = mysqli_fetch_assoc($select);
@@ -15,6 +16,7 @@ $datos = mysqli_fetch_assoc($sel);
 
 $cita = mysqli_query($conn, "SELECT * FROM `cita` WHERE `id_user` = $id_dueño");
 $info = mysqli_fetch_assoc($cita);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,7 +56,7 @@ $info = mysqli_fetch_assoc($cita);
         <div class="left box-primary">
             <h3>Paciente</h3>
             <img class="image" src="data:Image/*;base64, <?php echo base64_encode($filas["img"])?>" alt="imgUser" id="img-preview" />
-            <form action="../php/historial.php?idDoctor=<?php echo $user ?>&id=<?php echo $id ?>" method="POST">
+            <form action="../php/historial.php?idDoctor=<?php echo $user ?>&id=<?php echo $id ?>&idCita=<?php echo $idCita?>" method="POST">
                 <div class="form-group margin">
                     <label for="inputAnimal" class="col-sm-2 control-label">Mascota</label>
                     <div class="col-sm-10">

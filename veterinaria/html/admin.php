@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if (!isset($_SESSION["adm_info"])) {
+    header("Location: ../html/adm.php");
+}
     $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
     $numero = 1;
 
@@ -31,20 +34,24 @@
                 <input class="light-table-filter" type="search" placeholder="Buscar Cita"  id="Search" data-table="data-table">
             </form>
             <div class="cites">
+                <div class="container2">
+                <div class="table">
+                    <ul>
+                        <li>#</li>
+                        <li>Fecha</li>
+                        <li>Horario</li>
+                        <li>Cliente</li>
+                        <li>ID Cliente</li>
+                        <li>Teléfono</li>
+                        <li>Animal</li>
+                        <li># Animal</li>
+                        <li>Descripción</li>
+                        <li>Veterinario</li>
+                        <li>ELIMINAR</li>
+                    </ul>
+                </div>
                 <table class="tableCita data-table">
                     <tr>
-                        <td>#</td>
-                        <td>Fecha</td>
-                        <td>Horario</td>
-                        <td>Cliente</td>
-                        <td>ID Cliente</td>
-                        <td>Teléfono</td>
-                        <td>Animal</td>
-                        <td># Animal</td>
-                        <td>Descripción</td>
-                        <td>Doctor</td>
-                        <td>ELIMINAR CITA</td>
-                    </tr>
                     <?php
 
                     $citas = mysqli_query($conn, "SELECT * FROM `cita`");
@@ -103,6 +110,7 @@
                         }
                     ?>
                 </table>
+                </div>
             </div>
         </div>
         </div>

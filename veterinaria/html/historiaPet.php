@@ -2,10 +2,14 @@
     session_start();
     $conn = mysqli_connect('localhost', 'root', '', 'drhuellita');
     $id = $_GET['id'];
+
     $histo = mysqli_query($conn, "SELECT * FROM `historial` WHERE `id_pet` = '$id'");
     $datos = mysqli_fetch_array($histo);
 
     $numero = 1;
+    $idDoc = $datos['idDoctor'];
+    $name = mysqli_query($conn, "SELECT * FROM `doctors` WHERE `id` = '$idDoc'");
+    $docName = mysqli_fetch_array($name);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,6 +72,7 @@
                                 </td>
                                 <td>
                                     <?php echo $datos["Ages"] ?>
+                                    Meses
                                 </td>
                                 <td>
                                     <?php echo $datos["Color"] ?>
@@ -90,8 +95,8 @@
                                 <td>
                                     <?php echo $datos["Motivo"] ?>
                                 </td>
-                                <td>
-                                    <?php echo $datos["Atendido"] ?>
+                                <td>   
+                                    <?php echo $docName['Nombre'] ?>
                                 </td>
                                 <td>
                                     <?php echo $datos["Medica"] ?>

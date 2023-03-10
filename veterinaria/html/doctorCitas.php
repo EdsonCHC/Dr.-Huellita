@@ -49,20 +49,23 @@ if (!isset($_SESSION["doctor_info"])) {
                 <input class="light-table-filter" type="search" placeholder="Buscar Cita"  id="Search" data-table="data-table">
             </form>
             
-            <div>
+            <div class="cities">
+                <div class="container2">
+                    <div class="table">
+                        <ul>
+                            <li>#</li>
+                            <li>Fecha</li>
+                            <li>Horario</li>
+                            <li>Cliente</li>
+                            <li>ID Cliente</li>
+                            <li>Teléfono</li>
+                            <li>Animal</li>
+                            <li># Animal</li>
+                            <li>Descripción</li>
+                            <li>Historial</li>
+                        </ul>
+                    </div>
                 <table class="tableCita data-table">
-                    <tr>
-                        <td>#</td>
-                        <td>Fecha</td>
-                        <td>Horario</td>
-                        <td>Cliente</td>
-                        <td>ID Cliente</td>
-                        <td>Teléfono</td>
-                        <td>Animal</td>
-                        <td># Animal</td>
-                        <td>Descripción</td>
-                        <td>Historial</td>
-                    </tr>
                     <?php
 
                     $citas = mysqli_query($conn, "SELECT * FROM `cita` WHERE `doctorID` = '$user'  ORDER BY id DESC");
@@ -98,7 +101,7 @@ if (!isset($_SESSION["doctor_info"])) {
                                     <?php echo $datos["Descripcion"] ?>
                                 </td>
                                 <td>
-                                    <a href="../html/histo.php?id=<?php echo $datos["id_pet"] ?>&id_dueño=<?php echo $datos["id_user"] ?>">Crear</a>
+                                    <a class="Del" href="../html/histo.php?id=<?php echo $datos["id_pet"] ?>&id_dueño=<?php echo $datos["id_user"] ?>&idCita=<?php echo $datos["id"] ?>">Crear</a>
                                 </td>
 
                             </tr>
@@ -108,11 +111,11 @@ if (!isset($_SESSION["doctor_info"])) {
                     }else{
                         ?>
                         <h3 class="msg">No tienes Citas Asignadas</h3>
-                    <?php
-
-                        }
+                        <?php
+                    }
                     ?>
                 </table>
+                </div>
             </div>
         </div>
         </div>
