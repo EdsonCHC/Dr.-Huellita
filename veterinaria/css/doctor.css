@@ -96,7 +96,7 @@ main{
 
 .tableCita td{
     border: 2px solid black;
-    width: 115px;
+    width: 126.3px;
     max-width: 116px;
     border-left: 2px solid black;
     padding: 0 10px;
@@ -166,16 +166,18 @@ a.Del{
 .table ul{
     width: 100%;
     display: flex;
+    position: relative;
 }
 
-.table ul>li{
+.table ul > li{
     height: 30px;
-    max-width: 116px;
-    min-width: 116px;
+    width: 126.3px;
+    max-width: 126.3px;
     background-color: var(--color2);
     text-align: center;
+    list-style: none;
     display: inline-block;
-    margin-left: 1px;
+    margin-left: 2px;
     padding: 5px 0;
     border: 2px solid black;
 }

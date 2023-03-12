@@ -44,7 +44,6 @@ if (!isset($_SESSION["adm_info"])) {
                         <li>ID Cliente</li>
                         <li>Teléfono</li>
                         <li>Animal</li>
-                        <li># Animal</li>
                         <li>Descripción</li>
                         <li>Veterinario</li>
                         <li>ELIMINAR</li>
@@ -79,9 +78,6 @@ if (!isset($_SESSION["adm_info"])) {
                                 </td>
                                 <td>
                                     <?php echo $datos["Animal"] ?>
-                                </td>
-                                <td>
-                                    <?php echo $datos["id_pet"] ?>
                                 </td>
                                 <td>
                                     <?php echo $datos["Descripcion"] ?>

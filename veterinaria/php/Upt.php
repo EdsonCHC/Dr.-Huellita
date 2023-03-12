@@ -24,7 +24,7 @@
      $conn->close();
      $mensaje ="Los datos se han actualizado correctamente";
      echo "<script> alert('$mensaje');
-     window.location.href='../html/Login.php';
+     window.location.href='../html/usuarios.php';
      </script>";
     }
           

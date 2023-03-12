@@ -26,7 +26,7 @@
      $conn->close();
      $mensaje ="Los datos se han guardado";
      echo "<script> alert('$mensaje');
-     window.location.href='../html/Login.php';
+     window.location.href='../html/usuarios.php';
      </script>";
     }
           
