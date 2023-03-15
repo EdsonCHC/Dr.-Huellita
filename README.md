@@ -1,3 +1,3 @@
 # Dr.-Huellita
-Hola a todos este es Dr.huellita un sistema de reserva de citas veterinarias
-Se creo como un proyecto escolar asi que no esperen demasiado :)
+Hello everyone this is Dr.huellita a veterinary appointment booking system
+It was created as a school project so don't expect too much :)
