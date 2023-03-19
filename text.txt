@@ -1,3 +1,5 @@
 this is a exercise of git pull
 
 this is a change for a new commit
+
+this is a change for fetch command
